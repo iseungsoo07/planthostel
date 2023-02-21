@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background: var(--color-darkgreen);
+}
+
+.center_info_title {
+    font-family: "OKCHAN";
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.center_info {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-size: 24px;
+}
+
+.link {
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.link > a {
+    color: white;
+}

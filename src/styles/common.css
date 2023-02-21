@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "OKCHAN";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ONE-Mobile-POP";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GangwonEdu_OTFBoldA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 색상표 */
+:root {
+    --color-green: #40a76f;
+    --color-darkgreen: #225439;
+    --color-ivory: #f9f9f9;
+    --color-lightgreen: rgb(221, 237, 227);
+    --color-ligthgray: rgb(249, 249, 249);
+    --color-mint: rgba(64, 167, 111, 0.5);
+}
+
+html,
+head,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 1000px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a:active,
+a:hover {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* 본문 폰트 클래스 */
+.content_font {
+    font-family: "GangwonEdu_OTFBoldA";
+    font-size: 18px;
+}
+
+/* 서브타이틀 폰트 클래스 */
+.subtitle_font {
+    font-family: "ONE-Mobile-POP";
+    font-size: 20px;
+}

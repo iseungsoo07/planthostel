@@ -1,0 +1,282 @@
+/*main image box*/
+.main_box {
+    width: 1000px;
+    height: 480px;
+    background: url(assets/image/plant2.jpg);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    margin-right: 60px;
+}
+
+.Shortcuts {
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    vertical-align: middle;
+    font-family: "ONE-Mobile-POP";
+}
+
+.items {
+    background-color: rgba(249, 249, 249, 0.75);
+    border-radius: 15px;
+    text-align: center;
+    height: 134px;
+    margin-bottom: 15px;
+}
+
+.items:last-child {
+    margin-bottom: 0px;
+}
+
+.items p {
+    padding-top: 30px;
+    margin: 0;
+    margin-bottom: 26px;
+}
+
+.items a {
+    color: var(--color-darkgreen);
+    text-decoration: underline 2px var(--color-darkgreen);
+    text-underline-position: under;
+}
+
+.last_items {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+    min-height: 134px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.half_items {
+    background-color: rgba(249, 249, 249, 0.75);
+    border-radius: 15px;
+    text-align: center;
+    width: 195px;
+    height: 134px;
+    margin-bottom: 15px;
+}
+
+.half_items p {
+    margin-top: 50px;
+}
+
+.half_items a {
+    color: black;
+}
+
+/*index.html 오른쪽 박스*/
+.main_right_box {
+    width: 476px;
+}
+
+.logo_small {
+    font-family: "OKCHAN";
+    font-size: 20px;
+    color: var(--color-darkgreen);
+}
+
+.logo_small span {
+    color: var(--color-green);
+}
+
+.main_right_items {
+    background-color: var(--color-ivory);
+    border-radius: 15px;
+    text-align: center;
+    min-height: 165px;
+    margin-bottom: 15px;
+    padding: 10px 30px;
+}
+
+.main_right_items p {
+    text-align: left;
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.right_last_items {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+    min-height: 134px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right_half_items_left {
+    border: 2px solid var(--color-green);
+    border-radius: 15px;
+    text-align: center;
+    width: 227px;
+    height: 134px;
+    margin-bottom: 15px;
+    opacity: 0.75;
+    margin-right: 5px;
+}
+
+.right_half_items_right {
+    background-color: var(--color-green);
+    border-radius: 15px;
+    text-align: center;
+    width: 227px;
+    height: 134px;
+    margin-bottom: 15px;
+    opacity: 0.75;
+}
+
+.items_title {
+    font-family: "ONE-Mobile-POP";
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.items_link,
+.items_link_white {
+    margin-top: 0px;
+}
+
+.items_link > a {
+    font-family: "OKCHAN";
+    font-size: 20px;
+    color: #40a76f;
+}
+
+.items_link_white > a {
+    font-family: "OKCHAN";
+    font-size: 20px;
+    color: white;
+}
+
+/*화면 비율이 작아질 경우 스타일 변경*/
+@media screen and (max-width: 1500px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .main_box {
+        width: 100%;
+        background: rgba(0, 0, 0, 0);
+        margin-right: 20px;
+        padding: 0px;
+    }
+
+    .Shortcuts {
+        width: 400px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        vertical-align: middle;
+        font-family: "ONE-Mobile-POP";
+    }
+
+    .items {
+        background-color: rgba(249, 249, 249, 0.75);
+        border-radius: 15px;
+        text-align: center;
+        height: 120px;
+        margin-bottom: 15px;
+        background: url(assets/image/plant_back6.jpg);
+        background-position: top;
+    }
+
+    .items:nth-child(2) {
+        background: url(assets/image/plant_back6.jpg);
+        background-position: center;
+    }
+
+    .half_items {
+        border-radius: 15px;
+        text-align: center;
+        width: 192px;
+        height: 110px;
+        margin-bottom: 15px;
+        background: url(assets/image/plant_back6.jpg);
+        background-position: bottom;
+    }
+
+    .half_items p {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+
+    .body-wrapper {
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .body-content {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    /*index.html 오른쪽 박스*/
+    .main_right_box {
+        width: 380px;
+    }
+
+    .logo_small {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .main_right_items {
+        background-color: var(--color-ivory);
+        border-radius: 15px;
+        text-align: center;
+        height: 234px;
+        margin-bottom: 15px;
+        padding: 10px 30px;
+    }
+
+    .main_right_items p {
+        font-size: 20px;
+    }
+
+    .right_last_items {
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 15px;
+        text-align: center;
+        min-height: 134px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .right_half_items_left {
+        border: 2px solid var(--color-green);
+        border-radius: 15px;
+        text-align: center;
+        width: 170px;
+        height: 110px;
+        margin-bottom: 15px;
+        opacity: 0.75;
+        margin-right: 5px;
+    }
+
+    .right_half_items_right {
+        background-color: var(--color-green);
+        border-radius: 15px;
+        text-align: center;
+        width: 170px;
+        height: 110px;
+        margin-bottom: 15px;
+        opacity: 0.75;
+    }
+
+    .items_title {
+        font-size: 16px;
+    }
+}

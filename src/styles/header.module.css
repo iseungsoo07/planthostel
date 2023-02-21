@@ -1,0 +1,36 @@
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 1440px;
+    min-height: 210px;
+    height: 210px;
+    background-image: url(assets/image/plant1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    font-family: "OKCHAN";
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header_box {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    position: absolute;
+    color: var(--color-green);
+    font-size: 60px;
+    line-height: 88px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.38);
+    top: 60px;
+    white-space: nowrap;
+}
+
+.logo_white {
+    color: white;
+}

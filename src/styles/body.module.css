@@ -1,0 +1,30 @@
+.body_wrapper {
+    margin: 0 auto;
+    min-height: 85%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 180px;
+    /* min-width: 1440px; */
+    width: 100%;
+}
+
+.body_content {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+section {
+    padding: 0px 65px;
+    margin-bottom: 20px;
+    min-height: 480px;
+}
+
+/*index.html*/
+.index_box {
+    width: 100%;
+    display: flex;
+    padding-left: 0;
+    margin-left: 0;
+    margin: 0 auto;
+}
