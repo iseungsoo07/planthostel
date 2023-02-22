@@ -209,12 +209,12 @@
         font-size: 14px;
     }
 
-    .body-wrapper {
+    .body_wrapper {
         margin: 0 auto;
         min-height: 100%;
     }
 
-    .body-content {
+    .body_content {
         width: 800px;
         margin: 0 auto;
         display: flex;
