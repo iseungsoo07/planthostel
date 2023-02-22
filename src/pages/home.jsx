@@ -53,7 +53,7 @@ export const Home = () => {
             <div className={styles.right_half_items_left}>
               <p className={styles.items_title}>반려식물 병원예약</p>
               <p className={styles.items_link}>
-                <Link to="./hos/hos.html">HOS</Link>
+                <Link to="./hos">HOS</Link>
               </p>
             </div>
             <div className={styles.right_half_items_right}>
