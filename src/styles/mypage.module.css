@@ -1,0 +1,107 @@
+.menu_bar > li:last-child a {
+    color: var(--color-green);
+}
+
+.mypage-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.member_info_box {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: rgba(64, 167, 111, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+    font-family: "ONE-Mobile-POP";
+    font-weight: 100;
+    color: #286946;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px var(--color-mint);
+}
+
+.mypage_box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    background-color: var(--color-ivory);
+    padding: 50px 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 15px 15px 15px;
+    z-index: 1;
+}
+
+.mypage_box .mypage_list {
+    list-style: none;
+    margin: 0;
+}
+
+.mypage_box .mypage_list li {
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 10px 50px;
+    width: 380px;
+    height: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(64, 167, 111, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.mypage_box .mypage_list a:visited {
+    color: black;
+}
+
+input:disabled {
+    color: black;
+}
+
+input {
+    height: 50px;
+}
+
+input:hover,
+input:active,
+input:focus {
+    outline: none;
+}
+
+textarea:hover,
+textarea:active,
+textarea:focus {
+    outline: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn_area {
+    display: flex;
+}
+
+.btn_area button {
+    border: none;
+    box-sizing: border-box;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    font-family: "GangwonEdu_OTFBoldA";
+    font-size: 18px;
+    background: var(--color-darkgreen);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}

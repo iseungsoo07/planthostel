@@ -1,0 +1,79 @@
+.myinfo_list {
+    box-sizing: border-box;
+    width: 100%;
+}
+.myinfo_row {
+    margin-bottom: 20px;
+}
+
+.myinfo_row label {
+    display: flex;
+}
+
+.myinfo_row .label_title {
+    padding: 10px 20px;
+    width: 10%;
+    color: #286946;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px var(--color-mint);
+}
+
+.myinfo_row input:not(.address_btn) {
+    box-sizing: border-box;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color-mint);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 10px 30px;
+}
+
+.myinfo_row input[name="id"] {
+    background: rgba(64, 167, 111, 0.2);
+}
+
+.detail_address {
+    display: flex;
+}
+
+.flex_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.flex_input input {
+    height: 48px;
+}
+
+.flex_input input:first-child {
+    margin-right: 10px;
+}
+
+.flex_center {
+    justify-content: center;
+}
+
+.flex_center button {
+    margin: 20px;
+}
+
+.address_btn {
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: rgba(64, 167, 111, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    width: 18%;
+}
+
+.errorMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
