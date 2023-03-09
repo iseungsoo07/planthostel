@@ -1,9 +1,16 @@
 import styles from "styles/mypage.module.css";
 import { Body } from "./body";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const MypageBox = ({ children, showButton }) => {
     const navigate = useNavigate();
+
+    const [user, setUser] = useState({
+        id: 1,
+        userid: "apple123",
+        username: "김사과"
+    });
 
     const onClick = (e) => {
         if (e.target.value === "내 정보 수정") {
@@ -19,8 +26,8 @@ export const MypageBox = ({ children, showButton }) => {
             <div className={styles.main_box}>
                 <div className={styles.flex}>
                     <div className={`${styles.member_info_box} subtitle_font`}>
-                        ID : <span className={styles.userid}>회원1</span> /{" "}
-                        <span className={styles.name}>김사과님</span>
+                        ID : <span className={styles.userid}>{user.userid}</span> /{" "}
+                        <span className={styles.name}>{user.username}</span>
                     </div>
                     {showButton && (
                         <div className={styles.btn_area}>

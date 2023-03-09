@@ -8,9 +8,24 @@ import * as yup from "yup";
 import { useDaumPostcodePopup } from "react-daum-postcode";
 import { postcodeScriptUrl } from "react-daum-postcode/lib/loadPostcode";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const MyinfoModify = () => {
     const showButton = false;
+
+    const [user, setUser] = useState({
+        id: 1,
+        userid: "apple123",
+        username: "김사과",
+        password: "apple123",
+        password_check: "apple123",
+        email: "apple123@naver.com",
+        hp: "010-1234-1234",
+        zipcode: "12345",
+        address: "서울특별시 강남구",
+        detailAddress: "역삼1동 강남대로 362-33",
+        extraAddress: "106동 1103호"
+    });
 
     const open = useDaumPostcodePopup(postcodeScriptUrl);
 
@@ -64,7 +79,7 @@ export const MyinfoModify = () => {
     const zipcodeRegex = /^\d{5}$/;
 
     const schema = yup.object().shape({
-        password: yup.string().min(8, "비밀번호는 최소 8자 이상 입력해야 합니다.").required("비밀번호를 작성해주세요"),
+        password: yup.string().required("비밀번호를 작성해주세요").min(8, "비밀번호는 최소 8자 이상 입력해야 합니다."),
         password_check: yup
             .string()
             .oneOf([yup.ref("password"), null], "비밀번호가 일치하지 않습니다.")
@@ -114,7 +129,7 @@ export const MyinfoModify = () => {
                                 type="text"
                                 name="id"
                                 id="id"
-                                defaultValue="apple123"
+                                defaultValue={user.userid}
                                 disabled
                             />
                         </label>
@@ -155,7 +170,7 @@ export const MyinfoModify = () => {
                                 type="text"
                                 name="name"
                                 id="name"
-                                defaultValue="김사과"
+                                defaultValue={user.username}
                                 {...register("name")}
                             />
                         </label>
@@ -169,7 +184,7 @@ export const MyinfoModify = () => {
                                 type="text"
                                 name="email"
                                 id="email"
-                                defaultValue="apple123@naver.com"
+                                defaultValue={user.email}
                                 {...register("email")}
                             />
                         </label>
@@ -183,7 +198,7 @@ export const MyinfoModify = () => {
                                 type="text"
                                 name="hp"
                                 id="hp"
-                                defaultValue="010-1234-1234"
+                                defaultValue={user.hp}
                                 {...register("hp")}
                             />
                         </label>
@@ -198,7 +213,7 @@ export const MyinfoModify = () => {
                                     type="text"
                                     id="sample6_postcode"
                                     name="zipcode"
-                                    defaultValue="12345"
+                                    defaultValue={user.zipcode}
                                     readOnly
                                     {...register("zipcode")}
                                 />
@@ -219,7 +234,7 @@ export const MyinfoModify = () => {
                                 className="content_font"
                                 type="text"
                                 id="sample6_address"
-                                defaultValue="서울특별시 강남구"
+                                defaultValue={user.address}
                                 readOnly
                             />
                             <br />
@@ -234,14 +249,14 @@ export const MyinfoModify = () => {
                                     className="content_font"
                                     type="text"
                                     id="sample6_detailAddress"
-                                    defaultValue="역삼1동 강남대로 362-33"
+                                    defaultValue={user.detailAddress}
                                     {...register("detailAddress")}
                                 />
                                 <input
                                     className="content_font"
                                     type="text"
                                     id="sample6_extraAddress"
-                                    defaultValue="106동 1103호"
+                                    defaultValue={user.extraAddress}
                                     readOnly
                                 />
                             </div>

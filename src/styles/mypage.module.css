@@ -38,6 +38,14 @@
     z-index: 1;
 }
 
+.mypage_box .message {
+    color: #286946;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px var(--color-mint);
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
 .mypage_box .mypage_list {
     list-style: none;
     margin: 0;
