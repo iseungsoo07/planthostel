@@ -1,0 +1,70 @@
+.reservation {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.reservation .reservation_date {
+    color: #286946;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px var(--color-mint);
+    margin-left: 40px;
+}
+
+.reservation input {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color-mint);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 40%;
+    padding: 10px 30px;
+    height: 50px;
+}
+
+.reservation .reservation_info_btn {
+    box-sizing: border-box;
+    background: rgba(64, 167, 111, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    width: 15%;
+    height: 50px;
+}
+
+.reservation .reservation_cancel_btn {
+    box-sizing: border-box;
+    background: #40a76f;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    width: 15%;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.mypage_box .btn_area {
+    margin-top: 40px;
+}
+
+.btn_area {
+    display: flex;
+}
+
+.btn_area button {
+    border: none;
+    box-sizing: border-box;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    font-family: "GangwonEdu_OTFBoldA";
+    font-size: 18px;
+    background: var(--color-darkgreen);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}

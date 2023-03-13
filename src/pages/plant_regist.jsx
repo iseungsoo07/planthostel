@@ -1,23 +1,21 @@
 import { Buttons } from "components/buttons";
 import { MypageBox } from "components/mypageBox";
-import { useLocation, useNavigate } from "react-router-dom";
 import styles from "styles/mypage.module.css";
+import { useNavigate } from "react-router-dom";
 
-export const PlantModify = () => {
+export const PlantRegist = () => {
     const showButton = false;
+    const username = "김사과";
 
-    const { state: plant } = useLocation();
     const navigate = useNavigate();
 
     const goBack = () => {
         navigate("/plant_manage");
     };
 
-    const username = "김사과";
-
     return (
         <MypageBox showButton={showButton}>
-            <div className={styles.message}>{username} 님의 소중한 반려식물의 정보를 수정해주세요!</div>
+            <div className={styles.message}>{username} 님의 소중한 반려식물의 정보를 자세히 등록해주세요!</div>
             <form className="plant_info_list">
                 <ul>
                     <li className="plant_info_row">
@@ -28,7 +26,7 @@ export const PlantModify = () => {
                                 type="text"
                                 name="nickname"
                                 id="nickname"
-                                defaultValue={plant.nickname}
+                                placeholder="반려식물의 별명을 입력해주세요."
                             />
                         </label>
                     </li>
@@ -40,7 +38,7 @@ export const PlantModify = () => {
                                 type="text"
                                 name="species"
                                 id="species"
-                                defaultValue={plant.species}
+                                placeholder="반려식물의 종을 입력해주세요."
                             />
                         </label>
                     </li>
@@ -52,14 +50,20 @@ export const PlantModify = () => {
                                 type="text"
                                 name="flowerpot_size"
                                 id="flowerpot_size"
-                                defaultValue={plant.size}
+                                placeholder="화분 사이즈를 입력해주세요."
                             />
                         </label>
                     </li>
                     <li className="plant_info_row">
                         <label htmlFor="age">
                             <div className="label_title">나이</div>
-                            <input className="content_font" type="text" name="age" id="age" defaultValue={plant.age} />
+                            <input
+                                className="content_font"
+                                type="text"
+                                name="age"
+                                id="age"
+                                placeholder="*선택 / 대략적인 식물의 나이를 입력해주세요."
+                            />
                         </label>
                     </li>
                     <li className="plant_info_row">
@@ -70,35 +74,34 @@ export const PlantModify = () => {
                                 type="text"
                                 name="disease"
                                 id="disease"
-                                defaultValue={plant.diseases}
+                                placeholder="*선택 / 반려식물의 질병이 있다면, 상세히 적어주세요."
                             />
                         </label>
                     </li>
                     <li className="plant_info_row">
                         <label htmlFor="watering">
                             <div className="label_title">물 주기</div>
-                            <input
-                                className="content_font"
-                                type="text"
+                            <select
+                                className="watering content_font"
                                 name="watering"
                                 id="watering"
-                                defaultValue={plant.watering}
-                            />
+                                placeholder="평소 물을 주는 주기를 선택해주세요">
+                                <option>---</option>
+                                <option>1시간</option>
+                                <option>2시간</option>
+                                <option>3시간</option>
+                            </select>
                         </label>
                     </li>
                     <li className="plant_info_row">
                         <label htmlFor="etc">
                             <div className="label_title">그 외 정보</div>
-                            <textarea
-                                className="etc_info content_font"
-                                name="etc"
-                                id="etc"
-                                defaultValue={plant.etc}></textarea>
+                            <textarea className="etc_info content_font" name="etc" id="etc"></textarea>
                         </label>
                     </li>
                 </ul>
             </form>
-            <Buttons text1="취소" text2="완료" onClick1={goBack} />
+            <Buttons text1="목록" text2="완료" onClick1={goBack} />
         </MypageBox>
     );
 };

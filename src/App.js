@@ -8,6 +8,11 @@ import { MyinfoModify } from "./pages/myinfo_modify";
 import { PlantManage } from "pages/plant_manage";
 import { PlantDetail } from "pages/plant_detail";
 import { PlantModify } from "pages/plant_modify";
+import { PlantRegist } from "pages/plant_regist";
+import { Reservation } from "pages/reservation";
+import { ReservationHos } from "pages/reservation_hos";
+import { ReservationTel } from "pages/reservation_tel";
+import { ReservationPickup } from "pages/reservation_pickup";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +33,12 @@ const router = createBrowserRouter([
             { path: "/myinfo_modify", element: <MyinfoModify /> },
             { path: "/plant_manage", element: <PlantManage /> },
             { path: "/plant_detail/:id", element: <PlantDetail /> },
-            { path: "/plant_modify/:id", element: <PlantModify /> }
+            { path: "/plant_modify/:id", element: <PlantModify /> },
+            { path: "/plant_regist", element: <PlantRegist /> },
+            { path: "/reservation", element: <Reservation /> },
+            { path: "/reservation_hos/:id", element: <ReservationHos /> },
+            { path: "/reservation_tel/:id", element: <ReservationTel /> },
+            { path: "/reservation_pickup/:id", element: <ReservationPickup /> }
         ]
     }
 ]);

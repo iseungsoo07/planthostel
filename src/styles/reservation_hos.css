@@ -1,0 +1,69 @@
+.reservation_info_row {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.reservation_info_row label,
+.textarea_row label {
+    display: flex;
+    align-items: center;
+}
+
+.reservation_info_row .label_title,
+.textarea_row .label_title {
+    padding: 10px 20px;
+    color: #286946;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px var(--color-mint);
+}
+
+.reservation_info_row input {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color-mint);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 10px 30px;
+    width: 300px;
+}
+
+.textarea_row {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.textarea_row .plant_state {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color-mint);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 10px 30px;
+    width: 780px;
+    height: 180px;
+    resize: none;
+}
+
+.textarea_row .notice {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color-mint);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 10px 30px;
+    width: 780px;
+    height: 180px;
+    resize: none;
+}
+
+.reservation_info_row .blank_div {
+    width: 43%;
+}
