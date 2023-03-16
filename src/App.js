@@ -17,36 +17,40 @@ import { ReservationPickup } from "pages/reservation_pickup";
 import PickUp from "pages/PickUp";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <p>경로 확인 제대로해라 ㅄ아</p>,
-    children: [
-      { index: true, element: <Home /> },
-      {
-        path: "/tel",
-        element: <Tel />,
-      },
-      {
-        path: "/mypage",
-        element: <Mypage />,
-      },
-      { path: "/myinfo", element: <Myinfo /> },
-      { path: "/myinfo_modify", element: <MyinfoModify /> },
-      { path: "/plant_manage", element: <PlantManage /> },
-      { path: "/plant_detail/:id", element: <PlantDetail /> },
-      { path: "/plant_modify/:id", element: <PlantModify /> },
-      { path: "/plant_regist", element: <PlantRegist /> },
-      { path: "/reservation", element: <Reservation /> },
-      { path: "/reservation_hos/:id", element: <ReservationHos /> },
-      { path: "/reservation_tel/:id", element: <ReservationTel /> },
-      { path: "/reservation_pickup/:id", element: <ReservationPickup /> },
-    ],
-  },
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <p>경로 확인 제대로해라 ㅄ아</p>,
+        children: [
+            { index: true, element: <Home /> },
+            {
+                path: "/tel",
+                element: <Tel />,
+            },
+            {
+                path: "/mypage",
+                element: <Mypage />,
+            },
+            {
+                path: "/pickup",
+                element: <PickUp />,
+            },
+            { path: "/myinfo", element: <Myinfo /> },
+            { path: "/myinfo_modify", element: <MyinfoModify /> },
+            { path: "/plant_manage", element: <PlantManage /> },
+            { path: "/plant_detail/:id", element: <PlantDetail /> },
+            { path: "/plant_modify/:id", element: <PlantModify /> },
+            { path: "/plant_regist", element: <PlantRegist /> },
+            { path: "/reservation", element: <Reservation /> },
+            { path: "/reservation_hos/:id", element: <ReservationHos /> },
+            { path: "/reservation_tel/:id", element: <ReservationTel /> },
+            { path: "/reservation_pickup/:id", element: <ReservationPickup /> },
+        ],
+    },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+    return <RouterProvider router={router} />;
 }
 
 export default App;
