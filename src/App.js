@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       {
-        path: "/hos",
-        element: <p>Hos버튼 누르면 여기로간다! 페이지 만들면 됨</p>,
+        path: "/tel",
+        element: <Tel />,
       },
       {
         path: "/mypage",
