@@ -11,7 +11,7 @@ export const SubMenu = () => {
                 <Link to="./tel/tel.html">호텔예약</Link>
             </li>
             <li>
-                <Link to="./pickup/pickup.html">픽업서비스</Link>
+                <Link to="/pickup">픽업서비스</Link>
             </li>
             <li>
                 <Link to="#">이용후기</Link>

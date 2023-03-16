@@ -14,6 +14,7 @@ import { Reservation } from "pages/reservation";
 import { ReservationHos } from "pages/reservation_hos";
 import { ReservationTel } from "pages/reservation_tel";
 import { ReservationPickup } from "pages/reservation_pickup";
+import PickUp from "pages/PickUp";
 
 const router = createBrowserRouter([
   {
