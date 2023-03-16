@@ -1,0 +1,8 @@
+.plant_info_row label div:last-child {
+    margin-left: 50px;
+}
+
+.plant_info_row label .etc_detail {
+    margin-left: 50px;
+    width: 75%;
+}

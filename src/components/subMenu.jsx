@@ -29,7 +29,7 @@ export const SubMenu = () => {
                 <Link to="#">오시는길</Link>
             </li>
             <li>
-                <Link to="./mypage/mypage.html">내정보</Link>
+                <Link to="/mypage">내정보</Link>
             </li>
         </ul>
     );

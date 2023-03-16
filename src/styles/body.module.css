@@ -11,7 +11,7 @@
 .body_content {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 section {
