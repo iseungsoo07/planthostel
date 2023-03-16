@@ -1,3 +1,4 @@
+import Tel from "./pages/Tel";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "styles/common.css";
 import { Home } from "./pages/home";
