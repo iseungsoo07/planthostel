@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.logo_small{
+  font-family: 'OKCHAN';
+  font-size: 20px;
+  color: var(--color-darkgreen);
+}
+
+.logo_small span{
+  color: var(--color-green);
+}

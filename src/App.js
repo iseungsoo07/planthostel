@@ -1,3 +1,4 @@
+import Tel from "./pages/Tel";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "styles/common.css";
 import { Home } from "./pages/home";
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       {
         path: "/hos",
-        element: <p>Hos버튼 누르면 여기로간다! 페이지 만들면 됨</p>,
+        element: <Tel />,
       },
     ],
   },
