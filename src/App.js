@@ -13,6 +13,7 @@ import { Reservation } from "pages/reservation";
 import { ReservationHos } from "pages/reservation_hos";
 import { ReservationTel } from "pages/reservation_tel";
 import { ReservationPickup } from "pages/reservation_pickup";
+import PickUp from "pages/PickUp";
 
 const router = createBrowserRouter([
     {
@@ -23,11 +24,15 @@ const router = createBrowserRouter([
             { index: true, element: <Home /> },
             {
                 path: "/hos",
-                element: <p>Hos버튼 누르면 여기로간다! 페이지 만들면 됨</p>
+                element: <p>Hos버튼 누르면 여기로간다! 페이지 만들면 됨</p>,
             },
             {
                 path: "/mypage",
-                element: <Mypage />
+                element: <Mypage />,
+            },
+            {
+                path: "/pickup",
+                element: <PickUp />,
             },
             { path: "/myinfo", element: <Myinfo /> },
             { path: "/myinfo_modify", element: <MyinfoModify /> },
@@ -38,9 +43,9 @@ const router = createBrowserRouter([
             { path: "/reservation", element: <Reservation /> },
             { path: "/reservation_hos/:id", element: <ReservationHos /> },
             { path: "/reservation_tel/:id", element: <ReservationTel /> },
-            { path: "/reservation_pickup/:id", element: <ReservationPickup /> }
-        ]
-    }
+            { path: "/reservation_pickup/:id", element: <ReservationPickup /> },
+        ],
+    },
 ]);
 
 function App() {
