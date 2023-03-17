@@ -20,6 +20,7 @@ export default function MainBox({ subTitle, info, children }) {
                     id="agree"
                     value={agree}
                     onChange={handleChange}
+                    className={styles.checkBox}
                 />
                 <label htmlFor="agree">
                     개인정보보호법에 따라 위와 같이 입력한 개인정보 수집 및
