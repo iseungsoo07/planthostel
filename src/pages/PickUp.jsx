@@ -1,4 +1,3 @@
-import { Body } from "components/body";
 import TitleBox from "components/TitleBox";
 import React from "react";
 import styles from "styles/PickUp.module.css";
@@ -15,16 +14,11 @@ export default function PickUp() {
     ];
 
     return (
-        <Body>
-            <div className={styles.container}>
-                <TitleBox title="PLANT" title_span="Pick Up" src={img} />
-                <MainBox
-                    subTitle="▷ 반려식물 고르고 편하게 픽업! ◁"
-                    info={info}
-                >
-                    <div>pickup list</div>
-                </MainBox>
-            </div>
-        </Body>
+        <div className={styles.container}>
+            <TitleBox title="PLANT" title_span="Pick Up" src={img} />
+            <MainBox subTitle="▷ 반려식물 고르고 편하게 픽업! ◁" info={info}>
+                <div>pickup list</div>
+            </MainBox>
+        </div>
     );
 }
