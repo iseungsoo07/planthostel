@@ -6,9 +6,22 @@ export const MyinfoRow = ({ id, text, type, name, value, canModify }) => {
             <label htmlFor={id}>
                 <div className={styles.label_title}>{text}</div>
                 {canModify ? (
-                    <input className="content_font" type={type} name={name} id={id} defaultValue={value} />
+                    <input
+                        className={`content_font ${styles.myinfo_input}`}
+                        type={type}
+                        name={name}
+                        id={id}
+                        defaultValue={value}
+                    />
                 ) : (
-                    <input className="content_font" type={type} name={name} id={id} defaultValue={value} disabled />
+                    <input
+                        className={`content_font ${styles.myinfo_input}`}
+                        type={type}
+                        name={name}
+                        id={id}
+                        defaultValue={value}
+                        disabled
+                    />
                 )}
             </label>
         </li>
