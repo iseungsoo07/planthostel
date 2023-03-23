@@ -20,7 +20,7 @@ export const SubMenu = () => {
                 <Link to="#">공지사항</Link>
             </li>
             <li>
-                <Link to="./info.html">이용안내</Link>
+                <Link to="/info">이용안내</Link>
             </li>
             <li>
                 <Link to="#">이벤트</Link>

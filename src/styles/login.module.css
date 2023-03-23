@@ -1,0 +1,77 @@
+.logo_top {
+    font-family: "OKCHAN";
+    color: var(--color-darkgreen);
+    font-size: 30px;
+}
+
+.logo_top_span {
+    color: var(--color-green);
+}
+
+.login_box {
+    width: 476px;
+    height: 380px;
+    background: rgba(249, 249, 249, 0.75);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding-top: 70px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.login_box input {
+    display: block;
+    margin: 0 auto;
+    width: 396px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(64, 167, 111, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-indent: 10px;
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 20px;
+}
+
+.login_box input[type="password"] {
+    font-family: "맑은 고딕";
+    font-size: 14px;
+}
+
+.login_box input::placeholder {
+    text-indent: 10px;
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 20px;
+}
+
+.login_box input:focus {
+    outline: none;
+}
+
+.login_box button {
+    box-sizing: border-box;
+    width: 396px;
+    height: 65.5px;
+
+    background: rgba(64, 167, 111, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-top: 15px;
+    border: none;
+    font-family: "OKCHAN";
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.login_box p {
+    font-family: "GangwonEduSaeeum_OTFMediumA";
+    font-size: 16px;
+}
+
+.login_box p span {
+    color: var(--color-green);
+    text-decoration: underline;
+    font-weight: 500;
+}
