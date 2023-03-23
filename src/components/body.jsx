@@ -1,6 +1,6 @@
 import styles from "styles/body.module.css";
 
-export const Body = ({ children, isFlex }) => {
+export const Body = ({ children, isFlex = true }) => {
     return (
         <div className={styles.body_wrapper}>
             {isFlex ? (
