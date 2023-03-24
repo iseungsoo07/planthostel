@@ -5,7 +5,7 @@ import styles from "styles/home.module.css";
 export const Home = () => {
     return (
         <>
-            <Body>
+            <Body isFlex={true}>
                 <div className={styles.main_box}>
                     <div className={styles.Shortcuts}>
                         <div className={styles.items}>

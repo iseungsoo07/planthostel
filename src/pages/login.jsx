@@ -3,7 +3,7 @@ import styles from "styles/login.module.css";
 
 export const Login = () => {
     return (
-        <Body isFlex={false}>
+        <Body>
             <div className={styles.logo_top}>
                 <p>
                     Plant <span className={styles.logo_top_span}>HOS & TEL</span>
