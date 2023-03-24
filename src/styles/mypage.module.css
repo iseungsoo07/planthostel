@@ -69,17 +69,17 @@
     color: black;
 }
 
-input:disabled {
+.myinfo_input:disabled {
     color: black;
 }
 
-input {
+.myinfo_input {
     height: 50px;
 }
 
-input:hover,
-input:active,
-input:focus {
+.myinfo_input:hover,
+.myinfo_input:active,
+.myinfo_input:focus {
     outline: none;
 }
 

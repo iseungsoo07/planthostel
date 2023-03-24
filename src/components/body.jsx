@@ -1,9 +1,13 @@
 import styles from "styles/body.module.css";
 
-export const Body = ({ children }) => {
+export const Body = ({ children, isFlex = false }) => {
     return (
         <div className={styles.body_wrapper}>
-            <section className={`${styles.body_content} ${styles.index_box}`}>{children}</section>
+            {isFlex ? (
+                <section className={`${styles.body_content} ${styles.index_box}`}>{children}</section>
+            ) : (
+                <section className={`${styles.body_content} ${styles.column_content}`}>{children}</section>
+            )}
         </div>
     );
 };

@@ -125,7 +125,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="id">
                             <div className={styles.label_title}>ID</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="text"
                                 name="id"
                                 id="id"
@@ -138,7 +138,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="password">
                             <div className={styles.label_title}>PW</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="password"
                                 name="password"
                                 id="password"
@@ -152,7 +152,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="password_check">
                             <div className={styles.label_title}>PW Check</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="password"
                                 name="password_check"
                                 id="password_check"
@@ -166,7 +166,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="name">
                             <div className={styles.label_title}>name</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="text"
                                 name="name"
                                 id="name"
@@ -180,7 +180,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="email">
                             <div className={styles.label_title}>E-mail</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="text"
                                 name="email"
                                 id="email"
@@ -194,7 +194,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="hp">
                             <div className={styles.label_title}>H.P</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="text"
                                 name="hp"
                                 id="hp"
@@ -209,7 +209,7 @@ export const MyinfoModify = () => {
                             <div className={styles.label_title}>Zipcode</div>
                             <div className={styles.flex_input}>
                                 <input
-                                    className="content_font"
+                                    className={`content_font ${styles.myinfo_input}`}
                                     type="text"
                                     id="sample6_postcode"
                                     name="zipcode"
@@ -231,7 +231,7 @@ export const MyinfoModify = () => {
                         <label htmlFor="address">
                             <div className={styles.label_title}>Address</div>
                             <input
-                                className="content_font"
+                                className={`content_font ${styles.myinfo_input}`}
                                 type="text"
                                 id="sample6_address"
                                 defaultValue={user.address}
@@ -246,14 +246,14 @@ export const MyinfoModify = () => {
                             <div className={styles.label_title}></div>
                             <div className={styles.flex_input}>
                                 <input
-                                    className="content_font"
+                                    className={`content_font ${styles.myinfo_input}`}
                                     type="text"
                                     id="sample6_detailAddress"
                                     defaultValue={user.detailAddress}
                                     {...register("detailAddress")}
                                 />
                                 <input
-                                    className="content_font"
+                                    className={`content_font ${styles.myinfo_input}`}
                                     type="text"
                                     id="sample6_extraAddress"
                                     defaultValue={user.extraAddress}
