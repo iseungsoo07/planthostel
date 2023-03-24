@@ -3,6 +3,8 @@ import React from "react";
 import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
 import MainBox from "components/MainBox";
+import PickUpList from "components/PickUpList";
+import ReserveInfo from "components/ReserveInfo";
 
 export default function PickUp() {
     const info = [
@@ -17,7 +19,8 @@ export default function PickUp() {
         <div className={styles.container}>
             <TitleBox title="PLANT" title_span="Pick Up" src={img} />
             <MainBox subTitle="▷ 반려식물 고르고 편하게 픽업! ◁" info={info}>
-                <div>pickup list</div>
+                <PickUpList />
+                <ReserveInfo />
             </MainBox>
         </div>
     );

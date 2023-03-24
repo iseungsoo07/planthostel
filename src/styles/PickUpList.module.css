@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.4rem;
+    margin-top: 2rem;
+}
+
+/* pickup list 스크롤바 */
+.scrollBar {
+    width: auto;
+    height: 50rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrollBar::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: var(--color-darkgreen);
+    /* 스크롤바의 색상 */
+    border-radius: 1rem;
+}
