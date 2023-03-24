@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    margin-top: 4rem;
+}
+
+.box {
+    display: grid;
+    margin: 0.5rem;
+    width: 100%;
+}
+
+.box p {
+    font-family: "ONE-Mobile-POP";
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.box input {
+    margin: 0 auto;
+    width: 90%;
+    height: 4rem;
+    background: rgba(64, 167, 111, 0.2);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'GangwonEdu_OTFLightA';
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+}
