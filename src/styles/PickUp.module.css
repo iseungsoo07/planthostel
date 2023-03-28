@@ -16,7 +16,8 @@
     width: 100%;
 }
 
-.formBox p {
+.formBox p,
+.timeBox p {
     font-family: "ONE-Mobile-POP";
     text-align: center;
     margin-top: 2rem;
@@ -34,5 +35,33 @@
     font-family: 'GangwonEdu_OTFLightA';
     font-weight: 300;
     font-size: 1.2rem;
+    text-align: center;
+}
+
+.timeBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.selectDate {
+    margin: 0 auto;
+    width: 90%;
+    height: 4rem;
+    background: rgba(64, 167, 111, 0.2);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'GangwonEdu_OTFLightA';
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.react-datepicker__header {
+    height: 36px !important;
+    padding: 0 !important;
+    background-color: #6400ff !important;
+    border: none !important;
+    position: relative;
     text-align: center;
 }

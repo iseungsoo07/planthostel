@@ -4,6 +4,10 @@ import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
 import MainBox from "components/MainBox";
 import PickUpList from "components/PickUpList";
+import DatePicker from "react-datepicker";
+import { ko } from "date-fns/esm/locale";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function PickUp() {
     const monthList = [
@@ -34,6 +38,8 @@ export default function PickUp() {
         month: "",
         date: "",
     });
+
+    const [startDate, setStartDate] = useState(new Date());
 
     // 예약 버튼 클릭했을 때
     const handleClick = (agree) => {
@@ -86,20 +92,32 @@ export default function PickUp() {
                             onChange={handleChange}
                         />
                     </div>
-
-                    <div className={styles.timeBox}>
-                        <p>픽업 날짜와 시간을 선택해주세요</p>
-                        <div className={styles.selectbox}>
-                            <select onChange={handleSelect} value={form.month}>
-                                {monthList.map((item) => (
-                                    <option value={item} key={item}>
-                                        {item}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                    </div>
                 </form>
+                <div className={styles.timeBox}>
+                    <p>픽업 날짜와 시간을 선택해주세요</p>
+                    <div className={styles.selectBox}>
+                        <DatePicker
+                            className={styles.selectDate}
+                            selected={startDate}
+                            onChange={(date) =>
+                                setForm((prev) => ({
+                                    ...prev,
+                                    date,
+                                }))
+                            }
+                            locale={ko}
+                            dateFormat="yyyy년 M월 d일"
+                            minDate={new Date()}
+                        />
+                        {/* <select onChange={handleSelect} value={form.month}>
+                            {monthList.map((item) => (
+                                <option value={item} key={item}>
+                                    {item}
+                                </option>
+                            ))}
+                        </select> */}
+                    </div>
+                </div>
             </MainBox>
         </div>
     );
