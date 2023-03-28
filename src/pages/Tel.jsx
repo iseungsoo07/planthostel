@@ -1,5 +1,5 @@
 import Reserve from "../components/Reserve";
-import React from "react";
+import { React, useState } from "react";
 import styles from "../styles/Tel.module.css";
 import TitleBox from "./../components/TitleBox";
 import MainBox from "./../components/MainBox";
@@ -13,11 +13,72 @@ export default function Tel() {
     "- 화분의 사이즈에 따라 가격이 다를 수 있습니다.",
     "- 2개 이상 픽업 예약 시 10% 할인율이 적용됩니다.",
   ];
+
+  const [inputs, setInputs] = useState({
+    name: "",
+    phone: "",
+    plant: "",
+    notice: "",
+    checkInDate: "",
+    checkInTime: "",
+    checkOutDate: "",
+    checkOutTime: "",
+  });
+
+  const {
+    name,
+    phone,
+    plant,
+    notice,
+    checkInDate,
+    checkInTime,
+    checkOutDate,
+    checkOutTime,
+  } = inputs;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+
   return (
     <div className={styles.container}>
       <TitleBox title="PLANT" title_span="TEL" src={img} />
       <MainBox subTitle="▷ 반려식물 호텔 예약 ◁" info={info}>
         <Reserve />
+        <form className={styles.tel_form} onSubmit={handleSubmit}>
+          <div className={styles.reserve_box}>
+            <div className={styles.name_box}>
+              <label htmlFor="name">예약자 성함</label>
+              <input
+                className={styles.name_input}
+                type="text"
+                name="name"
+                placeholder="성함을 입력해주세요"
+                value={name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.phone_box}>
+              <label htmlFor="phone">예약자 휴대폰번호</label>
+              <input
+                className={styles.phone_input}
+                type="text"
+                name="phone"
+                placeholder="휴대폰 번호를 입력해주세요"
+                value={phone}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+        </form>
       </MainBox>
     </div>
   );

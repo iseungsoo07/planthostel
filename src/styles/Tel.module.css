@@ -14,3 +14,26 @@
 .logo_small span{
   color: var(--color-green);
 }
+
+.tel_form{
+  display: flex;
+  flex-direction: column;
+}
+
+.reserve_box{
+  display: flex;
+  margin-top: 30px;
+}
+
+.name_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.phone_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}

@@ -8,10 +8,8 @@ export default function Reserve() {
   } = useQuery(["memberData"], async () => {
     return fetch(`data/memberData.json`).then((res) => res.json());
   });
-
   if (isLoading) return <p>loading...</p>;
   if (error) return <p>{error}</p>;
-  console.log(memberData);
   return (
     <div className={styles.container}>
       <h2>회원정보</h2>
