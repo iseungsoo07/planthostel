@@ -1,4 +1,5 @@
 import Reserve from "../components/Reserve";
+import { useQuery } from "@tanstack/react-query";
 import { React, useState } from "react";
 import styles from "../styles/Tel.module.css";
 import TitleBox from "./../components/TitleBox";
@@ -6,6 +7,14 @@ import MainBox from "./../components/MainBox";
 import img from "assets/image/plant5.jpg";
 
 export default function Tel() {
+  const {
+    isLoading,
+    error,
+    data: memberData,
+  } = useQuery(["memberData"], async () => {
+    return fetch(`data/memberData.json`).then((res) => res.json());
+  });
+
   const info = [
     "- 택배 배송은 어렵습니다. 픽업만 가능합니다.",
     "- 정해진 픽업 날짜와 시간을 초과할 시, 예약이 자동 취소됩니다.",
@@ -47,12 +56,13 @@ export default function Tel() {
       [name]: value,
     });
   };
-
+  if (isLoading) return <p>loading...</p>;
+  if (error) return <p>{error}</p>;
   return (
     <div className={styles.container}>
       <TitleBox title="PLANT" title_span="TEL" src={img} />
       <MainBox subTitle="▷ 반려식물 호텔 예약 ◁" info={info}>
-        <Reserve />
+        <Reserve data={memberData} />
         <form className={styles.tel_form} onSubmit={handleSubmit}>
           <div className={styles.reserve_box}>
             <div className={styles.name_box}>
