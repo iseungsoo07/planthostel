@@ -4,9 +4,22 @@ import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
 import MainBox from "components/MainBox";
 import PickUpList from "components/PickUpList";
-import ReserveInfo from "components/ReserveInfo";
 
 export default function PickUp() {
+    const monthList = [
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+    ];
     const info = [
         "- 택배 배송은 어렵습니다. 픽업만 가능합니다.",
         "- 정해진 픽업 날짜와 시간을 초과할 시, 예약이 자동 취소됩니다.",
@@ -15,10 +28,32 @@ export default function PickUp() {
         "- 2개 이상 픽업 예약 시 10% 할인율이 적용됩니다.",
     ];
 
-    const [reserve, setReserve] = useState({ name: "", phone: "" });
-    const handleChange = (form) => setReserve(form);
+    const [form, setForm] = useState({
+        name: "",
+        phone: "",
+        month: "",
+        date: "",
+    });
 
-    const handleSubmit = {};
+    // 예약 버튼 클릭했을 때
+    const handleClick = (agree) => {
+        if (agree) {
+            console.log(form);
+        }
+    };
+
+    // 성함, 휴대폰 번호 입력받아서 값 업데이트
+    const handleChange = (e) => {
+        if (e.target.name === "name") {
+            setForm((prev) => ({ ...prev, name: e.target.value }));
+        } else if (e.target.name === "phone") {
+            setForm((prev) => ({ ...prev, phone: e.target.value }));
+        }
+    };
+
+    const handleSelect = (e) => {
+        setForm((prev) => ({ ...prev, month: e.target.value }));
+    };
 
     return (
         <div className={styles.container}>
@@ -26,10 +61,45 @@ export default function PickUp() {
             <MainBox
                 subTitle="▷ 반려식물 고르고 편하게 픽업! ◁"
                 info={info}
-                onSubmit={handleSubmit}
+                onBtnClick={handleClick}
             >
                 <PickUpList />
-                <ReserveInfo onChange={handleChange} />
+                {/* 예약 정보 입력 */}
+                <form className={styles.form}>
+                    <div className={styles.formBox}>
+                        <p>예약자 성함</p>
+                        <input
+                            type="text"
+                            name="name"
+                            value={form.name}
+                            placeholder="성함을 입력해주세요"
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className={styles.formBox}>
+                        <p>예약자 휴대폰 번호</p>
+                        <input
+                            type="text"
+                            name="phone"
+                            value={form.phone}
+                            placeholder="번호를 입력해주세요"
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <div className={styles.timeBox}>
+                        <p>픽업 날짜와 시간을 선택해주세요</p>
+                        <div className={styles.selectbox}>
+                            <select onChange={handleSelect} value={form.month}>
+                                {monthList.map((item) => (
+                                    <option value={item} key={item}>
+                                        {item}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                </form>
             </MainBox>
         </div>
     );
