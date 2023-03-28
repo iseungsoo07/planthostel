@@ -16,11 +16,11 @@ export default function Tel() {
   });
 
   const info = [
-    "- 택배 배송은 어렵습니다. 픽업만 가능합니다.",
-    "- 정해진 픽업 날짜와 시간을 초과할 시, 예약이 자동 취소됩니다.",
-    "- 픽업 예약을 신청할 시 플랜트호스텔과 제휴를 맺은 곳과의 연결을 통해 재고를 채워두는 시스템이니 취소환급금에 관한 연락이 있을 수 있으니 양해 부탁드립니다.",
-    "- 화분의 사이즈에 따라 가격이 다를 수 있습니다.",
-    "- 2개 이상 픽업 예약 시 10% 할인율이 적용됩니다.",
+    "- 당일 픽업은 호텔비용이 추가되지 않습니다.",
+    "- 진료 시간 외의 방문은 상담이 어려울 수 있습니다.",
+    "- 12시간 이상 병원 및 호텔에 보관 시 시간 당 비용 2000원이 부과됩니다.",
+    "- 상태에 따라 진료 시간이 연장될 수 있습니다.",
+    "- 자세한 문의사항은 하단에 있는 연락처로 전화주세요.",
   ];
 
   const [inputs, setInputs] = useState({
@@ -66,11 +66,11 @@ export default function Tel() {
       <MainBox subTitle="▷ 반려식물 호텔 예약 ◁" info={info}>
         <Reserve data={memberData} />
         <form className={styles.tel_form} onSubmit={handleSubmit}>
-          <section className={styles.reserve_box}>
+          <div className={styles.reserve_box}>
             <div className={styles.name_box}>
               <label htmlFor="name">예약자 성함</label>
               <input
-                className={styles.name_input}
+                className={styles.input}
                 type="text"
                 name="name"
                 placeholder="성함을 입력해주세요"
@@ -81,7 +81,7 @@ export default function Tel() {
             <div className={styles.phone_box}>
               <label htmlFor="phone">예약자 휴대폰번호</label>
               <input
-                className={styles.phone_input}
+                className={styles.input}
                 type="text"
                 name="phone"
                 placeholder="휴대폰 번호를 입력해주세요"
@@ -89,16 +89,39 @@ export default function Tel() {
                 onChange={handleChange}
               />
             </div>
-          </section>
-          <section>
-            <label htmlFor="plant">나의 반려식물 선택하기</label>
+          </div>
 
-            <select name="plant" onChange={handleChange}>
+          <div className={styles.plant_box}>
+            <label htmlFor="plant">나의 반려식물 선택하기</label>
+            <select
+              name="plant"
+              onChange={handleChange}
+              className={styles.plant_input}
+            >
+              <option>식물을 선택하세요</option>
               {memberData[0].plant.map((plant) => (
                 <option value={plant}>{plant}</option>
               ))}
             </select>
-          </section>
+          </div>
+
+          <div className={styles.notice_box}>
+            <label htmlFor="notice">
+              반려식물의 주의사항을 자세히 설명해주세요
+            </label>
+            <textarea
+              className={styles.notice_input}
+              name="notice"
+              value={notice}
+              onChange={handleChange}
+              placeholder="여러분의 소중한 반려식물의 원활한 관리에 도움이 됩니다.&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+            ex)
+            뿌리썩음병 | 시들음병 | 탄저병 | 깜부기병 등 질병이 있다면 먼저 말씀해주세요!
+            물을 주는 시기가 특별히 관리되고 있다면 적어주세요
+            관리사가 주의해야할 점이 있다면 적어주세요
+            특별한 내용이 없다면 해당 식물에 맞는 원칙적인 관리법으로 호텔 서비스가 진행됩니다. "
+            ></textarea>
+          </div>
         </form>
       </MainBox>
     </div>
