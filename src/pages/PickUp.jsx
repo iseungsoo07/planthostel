@@ -1,5 +1,5 @@
 import TitleBox from "components/TitleBox";
-import React from "react";
+import React, { useState } from "react";
 import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
 import MainBox from "components/MainBox";
@@ -15,12 +15,21 @@ export default function PickUp() {
         "- 2개 이상 픽업 예약 시 10% 할인율이 적용됩니다.",
     ];
 
+    const [reserve, setReserve] = useState({ name: "", phone: "" });
+    const handleChange = (form) => setReserve(form);
+
+    const handleSubmit = {};
+
     return (
         <div className={styles.container}>
             <TitleBox title="PLANT" title_span="Pick Up" src={img} />
-            <MainBox subTitle="▷ 반려식물 고르고 편하게 픽업! ◁" info={info}>
+            <MainBox
+                subTitle="▷ 반려식물 고르고 편하게 픽업! ◁"
+                info={info}
+                onSubmit={handleSubmit}
+            >
                 <PickUpList />
-                <ReserveInfo />
+                <ReserveInfo onChange={handleChange} />
             </MainBox>
         </div>
     );

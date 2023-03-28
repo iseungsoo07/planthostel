@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "styles/ReserveInfo.module.css";
 
-export default function ReserveInfo() {
+export default function ReserveInfo(onChange) {
     const [form, setForm] = useState({ name: "", phone: "" });
 
     const handleChange = (e) => {
@@ -10,6 +10,7 @@ export default function ReserveInfo() {
         } else if (e.target.name === "phone") {
             setForm((prev) => ({ ...prev, phone: e.target.value }));
         }
+        onChange(form);
     };
     return (
         <form className={styles.container}>

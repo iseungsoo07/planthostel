@@ -4,7 +4,7 @@ import styles from "styles/MainBox.module.css";
 export default function MainBox({ subTitle, info, children }) {
     const [agree, setAgree] = useState(false);
     const handleChange = () => setAgree((agree) => !agree);
-    const handleClick = () => {};
+    const handleClick = {};
     return (
         <div className={styles.container}>
             <p className={styles.subTitle}>{subTitle}</p>
