@@ -56,6 +56,8 @@ export default function Tel() {
       [name]: value,
     });
   };
+
+  console.log(inputs);
   if (isLoading) return <p>loading...</p>;
   if (error) return <p>{error}</p>;
   return (
@@ -64,7 +66,7 @@ export default function Tel() {
       <MainBox subTitle="▷ 반려식물 호텔 예약 ◁" info={info}>
         <Reserve data={memberData} />
         <form className={styles.tel_form} onSubmit={handleSubmit}>
-          <div className={styles.reserve_box}>
+          <section className={styles.reserve_box}>
             <div className={styles.name_box}>
               <label htmlFor="name">예약자 성함</label>
               <input
@@ -87,7 +89,16 @@ export default function Tel() {
                 onChange={handleChange}
               />
             </div>
-          </div>
+          </section>
+          <section>
+            <label htmlFor="plant">나의 반려식물 선택하기</label>
+
+            <select name="plant" onChange={handleChange}>
+              {memberData[0].plant.map((plant) => (
+                <option value={plant}>{plant}</option>
+              ))}
+            </select>
+          </section>
         </form>
       </MainBox>
     </div>

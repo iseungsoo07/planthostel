@@ -7,7 +7,7 @@ export default function Reserve({ data }) {
         <p>이름:{data[0].name}</p>
         <p>이메일: {data[0].email}</p>
         <p>휴대폰번호: {data[0].phone}</p>
-        <p>반려식물 등록수: {data[0].plant}</p>
+        <p>반려식물 등록수: {data[0].plant.length}</p>
       </article>
     </div>
   );
