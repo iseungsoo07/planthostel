@@ -22,12 +22,14 @@ export default function MainBox({ subTitle, info, children }) {
                     onChange={handleChange}
                     className={styles.checkBox}
                 />
-                <label htmlFor="agree">
+                <label htmlFor="agree" className={styles.label}>
                     개인정보보호법에 따라 위와 같이 입력한 개인정보 수집 및
                     이용에 동의합니다.
                 </label>
             </div>
-            <button onClick={handleClick}>예약하기</button>
+            <button onClick={handleClick} className={styles.btn}>
+                예약하기
+            </button>
         </div>
     );
 }

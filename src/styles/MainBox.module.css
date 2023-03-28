@@ -15,17 +15,17 @@
     text-align: center;
     font-family: "ONE-Mobile-POP";
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 100;
 }
 
 .info {
     margin: 0 2rem;
-    font-family: 'GangwonEdu_OTFBoldA';
-    font-weight: 100;
-    font-size: 1.2rem;
+    font-family: 'GangwonEdu_OTFLightA';
+    font-weight: 300;
+    font-size: 1rem;
     align-self: left;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -35,13 +35,13 @@
     margin-left: 2rem;
 }
 
-label {
+.label {
     font-family: 'GangwonEdu_OTFBoldA';
     font-size: 1.2rem;
     margin-left: 0.5rem;
 }
 
-button {
+.btn {
     width: 95%;
     height: 4rem;
     margin-top: 2rem;

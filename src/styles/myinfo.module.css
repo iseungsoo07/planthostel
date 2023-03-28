@@ -77,3 +77,15 @@
     align-items: center;
     color: red;
 }
+
+.mypage_box .mypage_list a:visited {
+    color: black;
+}
+
+.myinfo_input:disabled {
+    color: black;
+}
+
+.myinfo_input {
+    height: 50px;
+}
