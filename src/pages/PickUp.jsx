@@ -1,5 +1,5 @@
 import TitleBox from "components/TitleBox";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
 import MainBox from "components/MainBox";
@@ -10,20 +10,7 @@ import { ko } from "date-fns/esm/locale";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function PickUp() {
-    const monthList = [
-        "1월",
-        "2월",
-        "3월",
-        "4월",
-        "5월",
-        "6월",
-        "7월",
-        "8월",
-        "9월",
-        "10월",
-        "11월",
-        "12월",
-    ];
+    const [monthList, setMonthList] = useState([]);
     const info = [
         "- 택배 배송은 어렵습니다. 픽업만 가능합니다.",
         "- 정해진 픽업 날짜와 시간을 초과할 시, 예약이 자동 취소됩니다.",
@@ -41,6 +28,22 @@ export default function PickUp() {
 
     const [startDate, setStartDate] = useState(new Date());
 
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+
+    // 이번 달 기준 +2 까지만 월 리스트 수정
+    const getMonthList = () => {
+        var next1 = month + 1;
+        var next2 = month + 2;
+        var arr = [`${month}월`, `${next1}월`, `${next2}월`];
+        return arr;
+    };
+
+    useEffect(() => {
+        setMonthList(getMonthList());
+    }, []);
+
     // 예약 버튼 클릭했을 때
     const handleClick = (agree) => {
         if (agree) {
@@ -50,13 +53,11 @@ export default function PickUp() {
 
     // 성함, 휴대폰 번호 입력받아서 값 업데이트
     const handleChange = (e) => {
-        if (e.target.name === "name") {
-            setForm((prev) => ({ ...prev, name: e.target.value }));
-        } else if (e.target.name === "phone") {
-            setForm((prev) => ({ ...prev, phone: e.target.value }));
-        }
+        const { value, name } = e.target;
+        setForm((prev) => ({ ...prev, [name]: value }));
     };
 
+    // 날짜, 시간 선택
     const handleSelect = (e) => {
         setForm((prev) => ({ ...prev, month: e.target.value }));
     };
@@ -96,7 +97,7 @@ export default function PickUp() {
                 <div className={styles.timeBox}>
                     <p>픽업 날짜와 시간을 선택해주세요</p>
                     <div className={styles.selectBox}>
-                        <DatePicker
+                        {/* <DatePicker
                             className={styles.selectDate}
                             selected={startDate}
                             onChange={(date) =>
@@ -108,14 +109,22 @@ export default function PickUp() {
                             locale={ko}
                             dateFormat="yyyy년 M월 d일"
                             minDate={new Date()}
-                        />
-                        {/* <select onChange={handleSelect} value={form.month}>
+                        /> */}
+                        <select onChange={handleSelect} value={form.month}>
                             {monthList.map((item) => (
                                 <option value={item} key={item}>
                                     {item}
                                 </option>
                             ))}
-                        </select> */}
+                        </select>
+
+                        <select onChange={handleSelect} value={form.month}>
+                            {monthList.map((item) => (
+                                <option value={item} key={item}>
+                                    {item}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                 </div>
             </MainBox>
