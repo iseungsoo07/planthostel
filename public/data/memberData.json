@@ -1,6 +1,6 @@
-[{
-  "name":"김사과",
-  "email":"apple@naver.com",
-  "phone":"010-1111-1111",
-  "plant":["죽순이", "죽돌이", "승수"]
-}] 
+{
+    "name": "김사과",
+    "email": "apple@naver.com",
+    "phone": "010-1111-1111",
+    "plant": ["죽순이", "죽돌이", "승수"]
+}
