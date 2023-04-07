@@ -5,16 +5,10 @@ import styles from "../styles/Tel.module.css";
 import TitleBox from "./../components/TitleBox";
 import MainBox from "./../components/MainBox";
 import img from "assets/image/plant5.jpg";
+import CheckInTimeTable from "components/CheckInTimeTable";
+import Calendar from "components/Calendar";
 
 export default function Tel() {
-  const {
-    isLoading,
-    error,
-    data: memberData,
-  } = useQuery(["memberData"], async () => {
-    return fetch(`data/memberData.json`).then((res) => res.json());
-  });
-
   const info = [
     "- 당일 픽업은 호텔비용이 추가되지 않습니다.",
     "- 진료 시간 외의 방문은 상담이 어려울 수 있습니다.",
@@ -22,7 +16,6 @@ export default function Tel() {
     "- 상태에 따라 진료 시간이 연장될 수 있습니다.",
     "- 자세한 문의사항은 하단에 있는 연락처로 전화주세요.",
   ];
-
   const [inputs, setInputs] = useState({
     name: "",
     phone: "",
@@ -56,8 +49,14 @@ export default function Tel() {
       [name]: value,
     });
   };
+  const {
+    isLoading,
+    error,
+    data: memberData,
+  } = useQuery(["memberData"], async () => {
+    return fetch(`data/memberData.json`).then((res) => res.json());
+  });
 
-  console.log(inputs);
   if (isLoading) return <p>loading...</p>;
   if (error) return <p>{error}</p>;
   return (
@@ -99,8 +98,10 @@ export default function Tel() {
               className={styles.plant_input}
             >
               <option>식물을 선택하세요</option>
-              {memberData[0].plant.map((plant) => (
-                <option value={plant}>{plant}</option>
+              {memberData.plant.map((plant, index) => (
+                <option key={index} value={plant}>
+                  {plant}
+                </option>
               ))}
             </select>
           </div>
@@ -122,6 +123,8 @@ export default function Tel() {
             특별한 내용이 없다면 해당 식물에 맞는 원칙적인 관리법으로 호텔 서비스가 진행됩니다. "
             ></textarea>
           </div>
+          <Calendar />
+          <CheckInTimeTable handleChange={handleChange} />
         </form>
       </MainBox>
     </div>
