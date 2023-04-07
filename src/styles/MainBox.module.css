@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 81vw;
     max-width: 936px;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 4rem;
     background-color: var(--color-ivory);
     padding: 3rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -20,7 +20,7 @@
 }
 
 .info {
-    margin: 0 2rem;
+    margin: 2rem;
     font-family: 'GangwonEdu_OTFLightA';
     font-weight: 300;
     font-size: 1rem;
