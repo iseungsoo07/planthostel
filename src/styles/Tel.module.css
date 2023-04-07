@@ -22,7 +22,7 @@
 
 .reserve_box{
   display: flex;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .name_box {
@@ -36,4 +36,52 @@
   flex-direction: column;
   align-items: center;
   width: 50%;
+}
+
+.input{
+  background: rgba(64, 167, 111, 0.2);
+  margin-top: 1rem;
+  width: 80%;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'GangwonEdu_OTFLightA';
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.plant_box, .notice_box{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant_input{
+  background: rgba(64, 167, 111, 0.2);
+  margin-top: 1rem;
+  width: 90%;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'GangwonEdu_OTFLightA';
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.notice_input{
+  background: rgba(64, 167, 111, 0.2);
+  margin-top: 1rem;
+  width: 83%;
+  height: 20rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'GangwonEdu_OTFLightA';
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  resize: none;
 }

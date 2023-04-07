@@ -1,6 +1,5 @@
 import styles from "../styles/reserve.module.css";
 export default function Reserve({ data }) {
-    // getData(data);
     return (
         <div className={styles.container}>
             <h2>회원정보</h2>

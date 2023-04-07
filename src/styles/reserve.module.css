@@ -6,7 +6,7 @@
 
 .infoBox{
   background-color: var(--color-mint);
-  width: 50rem;
+  width: 90%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
