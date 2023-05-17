@@ -32,9 +32,6 @@
     color: var(--color-darkgreen);
 }
 
-.sub_menu {
-    margin-bottom: 10px;
-}
 
 /*드롭메뉴바*/
 .sub_menu_ul {
