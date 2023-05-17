@@ -1,10 +1,10 @@
-nav {
+.nav {
     background: none;
     position: relative;
     min-height: 70px;
 }
 
-nav ul {
+.menu_bar {
     font-size: 0;
     margin: 0;
     margin-right: 30px;
@@ -14,12 +14,12 @@ nav ul {
     right: 0;
 }
 
-nav ul li {
+.menu_bar li {
     display: inline-block;
     position: relative;
 }
 
-nav ul li a {
+.menu_bar li a {
     color: black;
     display: block;
     font-size: 14px;
@@ -30,6 +30,10 @@ nav ul li a {
 
 .menu_item:hover {
     color: var(--color-darkgreen);
+}
+
+.sub_menu {
+    margin-bottom: 10px;
 }
 
 /*드롭메뉴바*/
@@ -69,6 +73,8 @@ nav ul li a {
         opacity: 1;
     }
 }
+
+
 
 .sub_menu_ul li {
     display: inline-block;
