@@ -1,4 +1,4 @@
-import styles from "styles/navbar.module.css";
+import styles from "styles/Navbar.module.css";
 import { Link } from "react-router-dom";
 
 export const SubMenu = () => {
@@ -8,7 +8,7 @@ export const SubMenu = () => {
                 <Link to="./hos/hos.html">병원예약</Link>
             </li>
             <li>
-                <Link to="./tel/tel.html">호텔예약</Link>
+                <Link to="/tel">호텔예약</Link>
             </li>
             <li>
                 <Link to="/pickup">픽업서비스</Link>

@@ -40,6 +40,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* 색상표 */
 :root {
@@ -47,8 +54,8 @@
     --color-darkgreen: #225439;
     --color-ivory: #f9f9f9;
     --color-lightgreen: rgb(221, 237, 227);
-    --color-ligthgray: rgb(249, 249, 249);
-    --color-mint: rgba(64, 167, 111, 0.2);
+    --color-lightgray: rgb(249, 249, 249);
+    --color-mint: rgba(64, 167, 111, 0.7);
 }
 
 html,

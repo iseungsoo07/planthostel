@@ -10,11 +10,13 @@ export const Home = () => {
                     <div className={styles.Shortcuts}>
                         <div className={styles.items}>
                             <p>Plant HOS & TEL이 궁금하다면?</p>
-                            <Link to="#">자주 묻는 질문</Link>
+                            <Link to="/faq">자주 묻는 질문</Link>
                         </div>
                         <div className={styles.items}>
                             <p>반려식물을 키우고 계신가요?</p>
-                            <Link to="./mypage/plant_regist.html">반려식물 등록하러 가기</Link>
+                            <Link to="./mypage/plant_regist.html">
+                                반려식물 등록하러 가기
+                            </Link>
                         </div>
                         <div className={styles.last_items}>
                             <div className={styles.half_items}>
@@ -49,13 +51,17 @@ export const Home = () => {
                     </div>
                     <div className={styles.right_last_items}>
                         <div className={styles.right_half_items_left}>
-                            <p className={styles.items_title}>반려식물 병원예약</p>
+                            <p className={styles.items_title}>
+                                반려식물 병원예약
+                            </p>
                             <p className={styles.items_link}>
                                 <Link to="./hos">HOS</Link>
                             </p>
                         </div>
                         <div className={styles.right_half_items_right}>
-                            <p className={styles.items_title}>반려식물 호텔예약</p>
+                            <p className={styles.items_title}>
+                                반려식물 호텔예약
+                            </p>
                             <p className={styles.items_link_white}>
                                 <Link to="./tel">TEL</Link>
                             </p>

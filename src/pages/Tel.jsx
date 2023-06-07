@@ -2,7 +2,7 @@ import Reserve from "../components/Reserve";
 import { useQuery } from "@tanstack/react-query";
 import { React, useState, useEffect } from "react";
 import styles from "../styles/Tel.module.css";
-import TitleBox from "./../components/TitleBox";
+import TitleBox from "../components/ui/TitleBox";
 import MainBox from "./../components/MainBox";
 import img from "assets/image/plant5.jpg";
 import CheckInTimeTable from "components/CheckInTimeTable";

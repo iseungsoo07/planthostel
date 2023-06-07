@@ -1,0 +1,17 @@
+.btn {
+    width: 9rem;
+    height: 5rem;
+    color: var(--color-darkgreen);
+    border: 0.3rem solid var(--color-lightgreen);
+    font-family: 'omyu_pretty';
+    font-size: 1.4rem;
+    margin: 0 0.2rem;
+}
+
+.green {
+    background-color: var(--color-lightgreen);
+}
+
+.white {
+    background-color: var(--color-ivory);
+}

@@ -1,0 +1,19 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-family: "omyu_pretty";
+    font-size: 1.3rem;
+    padding: 0.7rem 3rem;
+    margin: 1rem;
+    margin-right: 1rem;
+    color: var(--color-darkgreen);
+    border: solid var(--color-mint);
+    border-radius: 100px;
+}
+
+.call {
+    margin-right: 0.7rem;
+    padding-bottom: 0.2rem;
+}

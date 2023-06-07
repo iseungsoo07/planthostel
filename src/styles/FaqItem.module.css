@@ -1,0 +1,31 @@
+.container {
+    border-bottom: 0.2rem solid var(--color-lightgreen);
+}
+
+.queBox {
+    display: flex;
+    justify-content: space-between;
+    font-family: "omyu_pretty";
+    font-size: 1.4rem;
+    padding: 0 1rem;
+}
+
+.icon {
+    margin-top: 1.5rem;
+    transition: all 500ms ease;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+.ansBox {
+    min-height: 5rem;
+    align-items: stretch;
+    padding: 2rem 2rem;
+    font-family: "omyu_pretty";
+    font-size: 1.4rem;
+    margin: 1rem 1rem;
+    background-color: var(--color-lightgreen);
+    border-radius: 1rem;
+}

@@ -18,49 +18,58 @@ import PickUp from "pages/PickUp";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Login } from "pages/login";
 import { Info } from "pages/info";
+import Admin from "admin/pages/Admin";
+import Faq from "pages/Faq";
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <p>ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</p>,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "/login", element: <Login /> },
-      { path: "/info", element: <Info /> },
-      {
-        path: "/tel",
-        element: <Tel />,
-      },
-      {
-        path: "/mypage",
-        element: <Mypage />,
-      },
-      {
-        path: "/pickup",
-        element: <PickUp />,
-      },
-      { path: "/myinfo", element: <Myinfo /> },
-      { path: "/myinfo_modify", element: <MyinfoModify /> },
-      { path: "/plant_manage", element: <PlantManage /> },
-      { path: "/plant_detail/:id", element: <PlantDetail /> },
-      { path: "/plant_modify/:id", element: <PlantModify /> },
-      { path: "/plant_regist", element: <PlantRegist /> },
-      { path: "/reservation", element: <Reservation /> },
-      { path: "/reservation_hos/:id", element: <ReservationHos /> },
-      { path: "/reservation_tel/:id", element: <ReservationTel /> },
-      { path: "/reservation_pickup/:id", element: <ReservationPickup /> },
-    ],
-  },
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <p>ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</p>,
+        children: [
+            { index: true, element: <Home /> },
+            { path: "login", element: <Login /> },
+            { path: "info", element: <Info /> },
+            {
+                path: "tel",
+                element: <Tel />,
+            },
+            {
+                path: "mypage",
+                element: <Mypage />,
+            },
+            {
+                path: "pickup",
+                element: <PickUp />,
+            },
+            { path: "myinfo", element: <Myinfo /> },
+            { path: "myinfo_modify", element: <MyinfoModify /> },
+            { path: "plant_manage", element: <PlantManage /> },
+            { path: "plant_detail/:id", element: <PlantDetail /> },
+            { path: "plant_modify/:id", element: <PlantModify /> },
+            { path: "plant_regist", element: <PlantRegist /> },
+            { path: "reservation", element: <Reservation /> },
+            { path: "reservation_hos/:id", element: <ReservationHos /> },
+            { path: "reservation_tel/:id", element: <ReservationTel /> },
+            { path: "reservation_pickup/:id", element: <ReservationPickup /> },
+            { path: "faq", element: <Faq /> },
+        ],
+    },
+    {
+        path: "/admin",
+        element: <Admin />,
+        errorElement: <p>ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</p>,
+        children: [{ index: true, element: <Home /> }],
+    },
 ]);
 
 const queryClient = new QueryClient();
 
 function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+        </QueryClientProvider>
+    );
 }
 
 export default App;

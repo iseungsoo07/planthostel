@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleBox {
+    width: 100%;
+    background-color: var(--color-lightgreen);
+    display: block;
+    text-align: center;
+    padding: 3rem 1.2rem;
+    white-space: nowrap;
+    margin-top: -4.3rem;
+}
+
+.text {
+    font-family: "omyu_pretty";
+    font-size: 1.4rem;
+}
+
+.title {
+    font-family: "ONE-Mobile-POP";
+    font-size: 2.3rem;
+    color: var(--color-darkgreen);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(64, 167, 111, 0.5);
+
+}
+
+.title span {
+    color: var(--color-green);
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.category {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    max-width: 70rem;
+    margin: 2rem;
+    padding: 3rem;
+    background-color: var(--color-ivory);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}

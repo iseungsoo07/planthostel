@@ -1,4 +1,4 @@
-import TitleBox from "components/TitleBox";
+import TitleBox from "components/ui/TitleBox";
 import React, { useState, useEffect } from "react";
 import styles from "styles/PickUp.module.css";
 import img from "assets/image/plant5.jpg";
